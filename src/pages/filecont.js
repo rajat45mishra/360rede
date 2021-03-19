@@ -6,9 +6,9 @@ export default function Filecont() {
         <div>
 <Nav />
 <div style={{display:'flex',width:'60%',margin:'10%',marginLeft:'25%'}}>
-           <MediaControlCard /> 
-           <MediaControlCard />
-           <MediaControlCard />
+           <MediaControlCard button="View Original Images"/> 
+           <MediaControlCard button="View Croped Images" />
+           <MediaControlCard button="Send Email"/>
            </div>
         </div>
     )
