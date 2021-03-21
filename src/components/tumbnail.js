@@ -1,13 +1,7 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import SkipNextIcon from '@material-ui/icons/SkipNext';
 import {Button} from '@material-ui/core'
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,11 +24,15 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     paddingLeft: theme.spacing(1),
     paddingBottom: theme.spacing(1),
+    paddingTop:50
   },
   playIcon: {
     height: 38,
     width: 38,
   },
+  button_button:{
+    background:'#7749F8'
+  }
 }));
 
 export default function MediaControlCard({button}) {
@@ -45,7 +43,7 @@ export default function MediaControlCard({button}) {
     <Card className={classes.root}>
       <div className={classes.details}>
         <div className={classes.controls}>
-          <Button>{button}</Button>
+          <Button className={classes.button_button} href="/Selected">{button}</Button>
         </div>
       </div>
       <CardMedia

@@ -7,19 +7,21 @@ export default function Folders(props) {
         <div>
             <div class="container">
   <div class="card">
-    <h3 class="subheader">Folders</h3>
+    <h3 class="subheader">Project</h3>
     <ul class="list">
       <li class="waves-effect">
-        <div class="valign-wrapper">
-          <i class="material-icons left circle white-text">folder</i>
-          <div class="title">
+
+        <a href="/filec"><div class="valign-wrapper">
+        <i class="fas fa-folder-open fa-5x"></i>
+          <div class="title" style={{marginLeft:20}}>
             {props.description}<br />
             <span>Jan 9, 2017</span>
           </div>
-          <IconButton class="material-icons ml-auto">
-              <AccessAlarm></AccessAlarm>
-          </IconButton>
+          <a class="material-icons ml-auto" href="#">
+          <i class="fas fa-trash fa-2x"></i>
+          </a>
         </div>
+        </a>
       </li>
     </ul>
  

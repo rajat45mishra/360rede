@@ -1,8 +1,12 @@
 import React from 'react'
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol,Button } from "mdbreact";
 
 export default function Selectedthumbnail() {
     return (
+      <>
+      <div style={{paddingTop:10,marginLeft:'90%'}}>
+<Button>Sand eMail</Button>
+      </div>
       <div style={{ margin: '5%' }}>
         <div style={{ display: 'flex' }}>
           <MDBRow>
@@ -31,5 +35,6 @@ export default function Selectedthumbnail() {
           </MDBRow>
         </div>
       </div>
+      </>
     )
 }

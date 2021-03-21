@@ -9,6 +9,7 @@ import * as page from './pages/start'
 import File from './pages/file'
 import Filecont from './pages/filecont'
 import Selected from './pages/selected'
+import C404 from './pages/404'
 import {
   BrowserRouter as Router,
   Switch,
@@ -34,6 +35,9 @@ export default function App() {
           </Route>
           <Route path="/Selected">
             <Selected />
+          </Route>
+          <Route path="*">
+            <C404 />
           </Route>
         </Switch>
     </Router>

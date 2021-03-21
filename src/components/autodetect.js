@@ -15,9 +15,9 @@ export default function Autodetect() {
 						<div className="card">
 							<div className="autodetect">
 								<div className="card-content">
-									<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+									<p className="automade"><p style={{padding:20}}>.....................No Cameras Detected........................</p></p>
 								</div>
-								<div style={{ padding: '3%' }}>
+								<div style={{ padding: '3%',marginLeft:'25%' }}>
 									<button className="btn-floating btn-large waves-effect waves-light red" onClick={togglePopup}><i className="fa fa-plus"></i></button>
 								</div>
 								<div style={{ padding: '3%' }}>
@@ -25,8 +25,8 @@ export default function Autodetect() {
 								</div>
 							</div>
 							<div className="autodetect_buttons">
-								<a className="waves-effect waves-light btn-small">AutoDetect</a>
-								<a className="waves-effect waves-light btn-small">Resat</a>
+								<a className="waves-effect waves-light btn-large" >AutoDetect</a>
+								<a className="waves-effect waves-light btn-large" style={{marginLeft:'40%'}}>Resat</a>
 							</div>
 							{isOpen && <div style={{ marginTop: '60%' }}><Popup
 								content={<>

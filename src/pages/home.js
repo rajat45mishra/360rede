@@ -36,8 +36,8 @@ export function Home() {
             </div>
             {isOpen && <Popup content={<div><CircularStatic></CircularStatic></div>} handleClose={showpopup}></Popup>}
                 <div style={{ padding: '4%', display: 'flex',width:'50%' }}>
-                    <button className="waves-effect waves-light btn-small" type="submit" onClick={showpopup}>Start</button>
-                    <button className="waves-effect waves-light btn-small" type="submit">Snapshot</button>
+                    <button className="waves-effect waves-light btn-large" type="submit" onClick={showpopup}>Start</button>
+                    <button className="waves-effect waves-light btn-large" type="submit" style={{marginLeft:'20%'}}>Snapshot</button>
                    
                 </div>
             </div>
