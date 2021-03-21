@@ -1,12 +1,12 @@
 import React from 'react'
 import Popup from './default'
 import {useState} from 'react'
-
 export default function Autodetect() {
     const [isOpen, setIsOpen] = useState(false);
 	const togglePopup = () => {
 		setIsOpen(!isOpen);
 	}
+	
     return (
         <div>
            <div className="autodetect-container">
