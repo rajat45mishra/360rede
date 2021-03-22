@@ -1,21 +1,5 @@
 import React from 'react'
 export default function Sidebar() {
-  function handle() {
-    var dropdown = document.getElementsByClassName("dropdown-btn");
-  var i;
-  for (i = 0; i < dropdown.length; i++) {
-    dropdown[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var dropdownContent = this.nextElementSibling;
-      if (dropdownContent.style.display === "block") {
-        dropdownContent.style.display = "none";
-      } else {
-        dropdownContent.style.display = "block";
-      }
-    });
-  }
-  }
-  
     return (
       <>
         <div className="sidenav">
@@ -23,10 +7,7 @@ export default function Sidebar() {
         <a href="#services">Services</a>
         <a href="#clients">Clients</a>
         <a href="#contact">Contact</a>
-        <button className="dropdown-btn" onClick={handle}>Lights 
-          <i className="fa fa-caret-down"></i>
-        </button>
-        <div className="dropdown-container">
+        <a href="/">Lights:</a>
           <form action="#">
         <p className="range-field">
           <input type="range" />
@@ -39,7 +20,6 @@ export default function Sidebar() {
           <input type="range" />
           </p>
           </form>
-        </div>
         <a href="#contact">Search</a>
       </div>
       
