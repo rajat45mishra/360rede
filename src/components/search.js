@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import Folders from './folders'
 
 export default function Search() {
@@ -34,9 +34,9 @@ export default function Search() {
     return (
         <>
         <div style={{paddingTop:100,paddingLeft:'34%'}}>
-    <div class="row">
-    <div class="input-field col s6">
-      <input  id="first_name2" type="text" class="validate" placeholder="Search"  value={searchTerm}
+    <div className="row">
+    <div className="input-field col s6">
+      <input  id="first_name2" type="text" className="validate" placeholder="Search"  value={searchTerm}
         onChange={handleChange} />
     </div>
   </div> 

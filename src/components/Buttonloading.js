@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'react-dom';
 import { CircularProgress, Button } from '@material-ui/core';
 import ColoredLinearProgress from './progress';
 

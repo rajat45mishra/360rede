@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import { Button } from "mdbreact";
 import Listimage from '../components/listimage'
 export default function Selectedthumbnail() {
@@ -10,7 +10,7 @@ export default function Selectedthumbnail() {
     return (
       <>
       <div style={{paddingTop:10,marginLeft:'90%'}}>
-        <Button id="floter" onClick={handleemail}>Send eMail</Button>
+        <Button id="floter" onClick={handleemail} style={{backgroundColor:'#039be5'}}>Send eMail</Button>
       </div>
       <Listimage />
       <Listimage />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import {Button} from '@material-ui/core'
@@ -31,14 +31,12 @@ const useStyles = makeStyles((theme) => ({
     width: 38,
   },
   button_button:{
-    background:'#7749F8'
+    background:'#039be5'
   }
 }));
 
-export default function MediaControlCard({button}) {
+export default function MediaControlCard({button,image}) {
   const classes = useStyles();
-  const theme = useTheme();
-
   return (
     <Card className={classes.root}>
       <div className={classes.details}>
@@ -48,7 +46,7 @@ export default function MediaControlCard({button}) {
       </div>
       <CardMedia
         className={classes.cover}
-        image="https://tymui.herokuapp.com/static/img/popup-photo.jpg"
+        image={image}
         title="Live from space album cover"
       />
     </Card>

@@ -3,19 +3,10 @@ import Sidebar from '../components/sidebar'
 import { Nav } from '../components/nav'
 import Demo from '../components/cropper'
 import Form from '../components/form'
-import Popup from '../components/default'
-import {useState} from 'react'
-import LoadingButton from '../components/Buttonloading'
 import SimpleDialog from '../components/popupfor'
-import ColoredLinearProgress from '../components/progress'
 export function Home() {
-    const [isOpen, setIsOpen] = useState(false);
     const [open, setOpen] = React.useState(false);
 
-    function showpopup() {
-        setIsOpen(!isOpen);
-        
-    }
     const handleClickOpen = () => {
         setOpen(true);
       };
@@ -47,8 +38,8 @@ export function Home() {
                     </div>
                 </div>
                 <div style={{ padding: '4%', display: 'flex', width: '50%' }}>
-                    <button className="waves-effect waves-light btn-large" type="submit" onClick={handleClickOpen}>Start</button>
-                    <button className="waves-effect waves-light btn-large" type="submit" style={{ marginLeft: '20%' }}>Snapshot</button>
+                    <button className="waves-effect waves-light btn-large" type="submit" onClick={handleClickOpen} style={{backgroundColor:'#039be5'}}>Start</button>
+                    <button className="waves-effect waves-light btn-large" type="submit" style={{ marginLeft: '20%',backgroundColor:'#039be5' }}>Snapshot</button>
                 </div>
                 <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} />
             </div>

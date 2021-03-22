@@ -1,5 +1,5 @@
 import React from 'react'
-import { MDBContainer, MDBRow, MDBCol,Button } from "mdbreact";
+import { MDBRow, MDBCol } from "mdbreact";
 
 export default function Listimage() {
     return (
@@ -8,25 +8,25 @@ export default function Listimage() {
           <MDBRow>
             <MDBCol>
               <input type="checkbox" id="myCheckbox1" />
-              <label htmlFor="myCheckbox1"><img src="http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png" /></label>
+              <label htmlFor="myCheckbox1"><img src="http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png" alt="img"/></label>
             </MDBCol>
           </MDBRow>
           <MDBRow>
             <MDBCol>
               <input type="checkbox" id="myCheckbox2" />
-              <label htmlFor="myCheckbox2"><img src="http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png" /></label>
+              <label htmlFor="myCheckbox2"><img src="http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png" alt="img"/></label>
             </MDBCol>
           </MDBRow>
           <MDBRow>
             <MDBCol>
               <input type="checkbox" id="myCheckbox3" />
-              <label htmlFor="myCheckbox3"><img src="http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png" /></label>
+              <label htmlFor="myCheckbox3"><img src="http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png" alt="img"/></label>
             </MDBCol>
           </MDBRow>
           <MDBRow>
             <MDBCol>
               <input type="checkbox" id="myCheckbox4" />
-              <label htmlFor="myCheckbox4"><img src="http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png" /></label>
+              <label htmlFor="myCheckbox4"><img src="http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png" alt="img"/></label>
             </MDBCol>
           </MDBRow>
         </div>

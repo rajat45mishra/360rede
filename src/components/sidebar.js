@@ -1,8 +1,4 @@
-import React,{useEffect} from 'react'
-import logo from '../1.jpg'
-import Demo from '../components/cropper'
-import Cropper from 'react-cropper';
-
+import React from 'react'
 export default function Sidebar() {
   function handle() {
     var dropdown = document.getElementsByClassName("dropdown-btn");
@@ -22,24 +18,24 @@ export default function Sidebar() {
   
     return (
       <>
-        <div class="sidenav">
+        <div className="sidenav">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#clients">Clients</a>
         <a href="#contact">Contact</a>
-        <button class="dropdown-btn" onClick={handle}>Dropdown 
-          <i class="fa fa-caret-down"></i>
+        <button className="dropdown-btn" onClick={handle}>Lights 
+          <i className="fa fa-caret-down"></i>
         </button>
-        <div class="dropdown-container">
+        <div className="dropdown-container">
           <form action="#">
-        <p class="range-field">
+        <p className="range-field">
           <input type="range" />
           </p>
           <input type="range" />
-          <p class="range-field">
+          <p className="range-field">
           <input type="range" />
           </p>
-          <p class="range-field">
+          <p className="range-field">
           <input type="range" />
           </p>
           </form>

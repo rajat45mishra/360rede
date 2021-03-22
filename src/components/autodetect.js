@@ -21,12 +21,12 @@ export default function Autodetect() {
 									<button className="btn-floating btn-large waves-effect waves-light red" onClick={togglePopup}><i className="fa fa-plus"></i></button>
 								</div>
 								<div style={{ padding: '3%' }}>
-								<a className="waves-effect waves-light btn-large" href="/start">LiveView</a>
+								<a className="waves-effect waves-light btn-large" href="/start" style={{backgroundColor:'#039be5'}}>LiveView</a>
 								</div>
 							</div>
 							<div className="autodetect_buttons">
-								<a className="waves-effect waves-light btn-large" >AutoDetect</a>
-								<a className="waves-effect waves-light btn-large" style={{marginLeft:'40%'}}>Resat</a>
+								<a className="waves-effect waves-light btn-large" style={{backgroundColor:'#039be5'}} href="/">AutoDetect</a>
+								<a className="waves-effect waves-light btn-large" style={{marginLeft:'40%',backgroundColor:'#039be5'}} href="/">Resat</a>
 							</div>
 							{isOpen && <div style={{ marginTop: '60%' }}><Popup
 								content={<>

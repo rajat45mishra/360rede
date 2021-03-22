@@ -1,9 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import 'materialize-css/dist/css/materialize.min.css'
 import './App.css'
-import Popup from './components/default'
-import { useState } from 'react'
-import Nav from './components/nav'
 import * as pag from './pages/home'
 import * as page from './pages/start'
 import File from './pages/file'
@@ -13,8 +10,7 @@ import C404 from './pages/404'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 export default function App() {
 	
