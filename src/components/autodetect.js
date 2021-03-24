@@ -19,9 +19,9 @@ export default function Autodetect() {
 						<div className="card">
 							<div className="autodetect">
 								<div className="card-content">
-									<p className="automade"><p style={{padding:20}}>.....................No Cameras Detected........................</p></p>
+									<p className="automade"><p style={{padding:20,minWidth:500}}>No Cameras Detected</p></p>
 								</div>
-								<div style={{ padding: '3%',marginLeft:'25%' }}>
+								<div style={{ padding: '3%',marginLeft:'5%' }}>
 									<button className="btn-floating btn-large waves-effect waves-light red" onClick={togglePopup}><i className="fa fa-plus"></i></button>
 								</div>
 								<div style={{ padding: '3%' }}>
