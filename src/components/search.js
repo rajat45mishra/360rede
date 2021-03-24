@@ -2,22 +2,27 @@ import React from 'react'
 import Folders from './folders'
 
 export default function Search() {
+  const datad=String(new Date());
     const list1=[
         {
             config: 112,
-            description: "description text 1"
+            description: "Om Namah Shivaay",
+            dateNow:datad
           },
           {
             config: 787,
-            description: "description text 2"
+            description: "Om Hari Vishnu",
+            dateNow:datad
           },
           {
             config: 112,
-            description: "description text 1"
+            description: "Om Namo Narayna",
+            dateNow:datad
           },
           {
             config: 787,
-            description: "description text 2"
+            description: "Shree Ganeshay Namah",
+            dateNow:datad
           }
     ];
     const [searchTerm, setSearchTerm] = React.useState("");

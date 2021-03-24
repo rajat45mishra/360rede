@@ -12,7 +12,7 @@ export default function Folders(props) {
         <i className="fas fa-folder-open fa-5x"></i>
           <div className="title" style={{marginLeft:20}}>
             {props.description}<br />
-            <span>Jan 9, 2017</span>
+            <span>{props.dateNow}</span>
           </div>
           <a className="material-icons ml-auto" href="/">
           <i className="fas fa-trash fa-2x"></i>

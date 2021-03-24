@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import Cropper from "react-cropper";
 import "cropperjs/dist/cropper.css";
+import Rajat from '../rajat.jpg'
 
 const Demo = () => {
   const cropperRef = useRef(null);
@@ -12,9 +13,8 @@ const Demo = () => {
 
   return (
     <Cropper
-      src="https://raw.githubusercontent.com/roadmanfong/react-cropper/master/example/img/child.jpg"
+      src={Rajat}
       style={{ height: 640, width: 960}}
-      // Cropper.js options
       initialAspectRatio={16 / 9}
       guides={false}
       crop={onCrop}
