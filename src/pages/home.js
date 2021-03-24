@@ -15,6 +15,9 @@ export function Home() {
         setOpen(false);
       };
     const selectedValue=55;
+    const options = [
+        'ISO', '1500', '2000','5000','10000'
+      ];
     return (
         <div>
             <Nav />
@@ -24,16 +27,16 @@ export function Home() {
                     <Demo />
                     <div style={{ justifyContent: 'space-between', flex: 1, marginLeft: 400 }}>
                         <div style={{ width: '90%', padding: 13 }}>
-                            <Form />
+                            <Form options={options}/>
                         </div>
                         <div style={{ width: '90%', padding: 13 }}>
-                            <Form />
+                            <Form options={options}/>
                         </div>
                         <div style={{ width: '90%', padding: 13 }}>
-                            <Form />
+                            <Form options={options}/>
                         </div>
                         <div style={{ width: '90%', padding: 13 }}>
-                            <Form />
+                            <Form options={options}/>
                         </div>
                     </div>
                 </div>

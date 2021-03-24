@@ -35,13 +35,13 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function MediaControlCard({button,image}) {
+export default function MediaControlCard({button,image,link}) {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
       <div className={classes.details}>
         <div className={classes.controls}>
-          <Button className={classes.button_button} href="/Selected">{button}</Button>
+          <Button className={classes.button_button} href={link}>{button}</Button>
         </div>
       </div>
       <CardMedia

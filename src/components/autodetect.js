@@ -1,12 +1,16 @@
 import React from 'react'
 import Popup from './default'
 import {useState} from 'react'
+import Form from './form'
 export default function Autodetect() {
     const [isOpen, setIsOpen] = useState(false);
 	const togglePopup = () => {
 		setIsOpen(!isOpen);
+		
 	}
-	
+	const options = [
+        '8 Seconds', '12 Seconds', '16 Seconds'
+      ];
     return (
         <div>
            <div className="autodetect-container">
@@ -30,7 +34,7 @@ export default function Autodetect() {
 							</div>
 							{isOpen && <div style={{ marginTop: '60%' }}><Popup
 								content={<>
-									<b>   Design your Popup</b>
+									<b> Create Project</b>
 									<div className="row">
 										<form className="col s12">
 											<div className="row">
@@ -39,18 +43,10 @@ export default function Autodetect() {
 												</div>
 
 											</div>
-											<p style={{display:'inline-block'}}>
-												<label style={{paddingRight:10}}>
-													<input type="checkbox" />
-													<span>Red</span>
-												</label>
-												<label style={{paddingRight:10}}>
-													<input type="checkbox" />
-													<span>Red</span>
-												</label>
-												<label style={{paddingRight:10}}>
-													<input type="checkbox" />
-													<span>Red</span>
+											<p style={{display:'flex',alignItems:'center'}}>
+												<h1 style={{fontSize:20,textAlign:'center'}}>Seclect Duration</h1>
+												<label style={{paddingRight:5}}>
+													<Form options={options} />
 												</label>
 											</p>
 											<div style={{ padding: '3%' }}>

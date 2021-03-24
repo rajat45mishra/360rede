@@ -3,10 +3,7 @@ import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
 
-export default function form() {
-    const options = [
-        'one', 'two', 'three'
-      ];
+export default function form({options}) {
     const defaultOption = options[0];
     function onSelect() {
         console.log(defaultOption);
