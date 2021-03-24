@@ -44,13 +44,13 @@ export default function Autodetect() {
 
 											</div>
 											<p style={{display:'flex',alignItems:'center'}}>
-												<h1 style={{fontSize:20,textAlign:'center'}}>Seclect Duration</h1>
+												<h1 style={{fontSize:20,textAlign:'center'}}>Select Duration:</h1>
 												<label style={{paddingRight:5}}>
 													<Form options={options} />
 												</label>
 											</p>
 											<div style={{ padding: '3%' }}>
-									<button className="waves-effect waves-light btn-small" type="submit">Create Project</button>
+									<button className="waves-effect waves-light btn-large" style={{backgroundColor:'#039be5',width:250}} type="submit">Create Project</button>
 								</div>
 										</form>
 									</div></>}
