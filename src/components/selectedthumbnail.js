@@ -7,18 +7,12 @@ export default function Selectedthumbnail() {
     alert("email sent")
     
   }
+
     return (
       <>
       <div style={{paddingTop:10,marginLeft:'90%'}}>
         <Button id="floter" onClick={handleemail} style={{backgroundColor:'#039be5'}}>Send eMail</Button>
       </div>
-      <Listimage />
-      <Listimage />
-      <Listimage />
-      <Listimage />
-      <Listimage />
-      <Listimage />
-      <Listimage />
       <Listimage />
       </>
       
