@@ -1,63 +1,65 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { MDBRow, MDBCol } from "mdbreact";
+import useImages from '../hooks/useImages'
+import useEmailData from '../hooks/useEmailData'
+
+
 
 export default function Listimage() {
-  const list1=[
-    {
-        config: 112,
-        description: "http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png"
-      },
-      {
-        config: 78,
-        description: "http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png"
-      },
-      {
-        config: 11,
-        description: "http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png"
-      },
-      {
-        config: 788,
-        description: "http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png"
-      },
-      {
-        config: 789,
-        description: "http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png"
-      },
-      {
-        config: 790,
-        description: "http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png"
-      },
-      {
-        config: 778,
-        description: "http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png"
-      },
-      {
-        config: 775,
-        description: "http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png"
-      },
-      {
-        config: 7,
-        description: "http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png"
-      },
-      {
-        config: 797,
-        description: "http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png"
-      },
-      {
-        config: 785,
-        description: "http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png"
-      },
-      {
-        config: 723,
-        description: "http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png"
-      }
-];
+  const {images,setImages}=useImages();
+  const {emaildata,setEmailData}=useEmailData();
+  function myFunction(images) {
+    var keyval=String(Object.keys(images))
+    var n = keyval.endsWith("crop");
+    console.log(n);
+    if (n){
+      var res = keyval.slice(0, -4);
+      return res
+    }else{
+      return keyval
+    }
+  }
+  const keyval=Object.keys(images)
+  const keyval2=myFunction(images);
+  const valval=Object.values(images)
+  console.log(valval);
+
+const url="http://0.0.0.0:5000/media/"+keyval2+"/"+keyval+"/"
+function listloop(valval,url) {
+  var i;
+  var li=[];
+  for (i = 0; i < valval[0].length; i++) {
+    var em={};
+    console.log(valval[0][i])
+    var newurl=url+valval[0][i];
+    em['id']=i
+    em['url']=newurl
+    li.push(em);
+  }
+  return li
+}
+let lis=[];
+function handleChange(e,g) {
+  let isChecked = e.target.checked;
+  if (isChecked){
+    lis.push(g)
+  }else{
+    const index = lis.indexOf(g);
+if (index > -1) {
+  lis.splice(index, 1);
+}
+  }
+}
+useEffect(() => {
+setEmailData(lis);
+});
+const list1=listloop(valval,url);
 const listItems = list1.map((number) =>
 <div>
 <MDBRow>
 <MDBCol>
-  <input type="checkbox" id={number.config} />
-  <label htmlFor={number.config}><img src={number.description} alt="img"/></label>
+  <input type="checkbox" id={number.id} onChange={e=>handleChange(e,number.url)} />
+  <label htmlFor={number.id}><img src={number.url} alt="img"/></label>
 </MDBCol>
 </MDBRow>
 </div>

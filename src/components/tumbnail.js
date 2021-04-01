@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import {Button} from '@material-ui/core'
+import useImages from '../hooks/useImages'
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -35,13 +36,18 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function MediaControlCard({button,image,link}) {
+export default function MediaControlCard({button,image,link,child}) {
   const classes = useStyles();
+  const {images,setImages}=useImages();
+  function imagesfor(params) {
+    setImages(params)
+    console.log(params)
+  }
   return (
     <Card className={classes.root}>
       <div className={classes.details}>
         <div className={classes.controls}>
-          <Button className={classes.button_button} href={link}>{button}</Button>
+          <Button className={classes.button_button} onClick={e => imagesfor(child)}><a href={link}>{button}</a></Button>
         </div>
       </div>
       <CardMedia

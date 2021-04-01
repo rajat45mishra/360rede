@@ -1,8 +1,9 @@
 import React from 'react'
 import Folders from './folders'
-
+import useFolder from '../hooks/useFolder'
 export default function Search() {
   const datad=String(new Date());
+  const{folder,setFolder}=useFolder();
     const list1=[
         {
             config: 112,
@@ -30,9 +31,10 @@ export default function Search() {
     const handleChange = event => {
     setSearchTerm(event.target.value);
   };
+const datafordata=folder.projecttree
  React.useEffect(() => {
-    const results = list1.filter(person =>
-      person['description'].toLowerCase().includes(searchTerm)
+    const results = datafordata.filter(person =>
+      person['projectname'].toLowerCase().includes(searchTerm)
     );
     setSearchResults(results);
   }, [searchTerm]);
