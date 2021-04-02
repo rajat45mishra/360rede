@@ -41,18 +41,20 @@ function listloop(valval,url) {
 let lis=[];
 function handleChange(e,g) {
   let isChecked = e.target.checked;
-  if (isChecked){
+  console.log(isChecked)
+  if (isChecked) {
     lis.push(g)
-  }else{
-    const index = lis.indexOf(g);
-if (index > -1) {
-  lis.splice(index, 1);
-}
   }
+  console.log("wswsw",lis)
+}
+const setdata= (lis) =>{
+  setEmailData(lis);
 }
 useEffect(() => {
-setEmailData(lis);
-});
+  if(lis){
+    setdata(lis);
+  }
+}, [emaildata])
 const list1=listloop(valval,url);
 const listItems = list1.map((number) =>
 <div>

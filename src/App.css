@@ -294,4 +294,8 @@ min-height: 50px;
     align-items: center;
     font-size: 30px;
     padding-left: 30%;
-  }  
+  } 
+  
+.cropper-modal{
+    background: linear-gradient(to right, transparent 0%, transparent calc(50% - 0.81px), black calc(50% - 0.8px), black calc(50% + 0.8px), transparent calc(50% + 0.81px), transparent 100%),linear-gradient(to top, transparent 0%, transparent calc(50% - 0.81px), black calc(50% - 0.8px), black calc(50% + 0.8px), transparent calc(50% + 0.81px), transparent 100%)!importent;
+  }

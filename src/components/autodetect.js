@@ -79,7 +79,7 @@ export default function Autodetect() {
 		console.log(urlg);
 	  }
 	  const handlePreview = async e => {
-		setCameraId(camera.data[0])
+		setCameraId(camera?.data[0])
 		const urlgj='http://0.0.0.0:5000/camera_ctrl/api/camera_preview_source/'+camera?.data[0];
 		const toke = await CameraAutoRP(urlgj);
 	  }

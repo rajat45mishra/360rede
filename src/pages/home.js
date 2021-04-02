@@ -74,21 +74,20 @@ const [ConfigTo, setConfigTo] = React.useState();
                 <div style={{ display: 'flex' }}>
                     <Demo />
                     <div style={{ justifyContent: 'space-between', flex: 1, marginLeft: 400 }}>
-                        <div style={{ width: '90%', padding: 13 }}>
+                        <div style={{ width: '90%', padding: 13 }}>ISO:<br></br>
                             <Form options={iso} setSeconds={setConfigTo} title="ISO" />
                         </div>
-                        <div style={{ width: '90%', padding: 13 }} >
+                        <div style={{ width: '90%', padding: 13 }} >shutterspeed:<br></br>
                             <Form options={shutterspeed} setSeconds={setConfigTo} title="shutterspeed"/>
                         </div>
-                        <div style={{ width: '90%', padding: 13 }} >
-                            <Form options={colortemperature} setSeconds={setConfigTo} title="colortemperature" />
-                        </div>
-                        <div style={{ width: '90%', padding: 13 }} >
+                        <div style={{ width: '90%', padding: 13 }} >aperture:<br></br>
                             <Form options={aperture} setSeconds={setConfigTo} title="aperture"/>
-                        
                         </div>
-                        <div style={{ width: '90%', padding: 13 }} >
+                        <div style={{ width: '90%', padding: 13 }} >whitebalance:<br></br>
                             <Form options={whitebalance} setSeconds={setConfigTo} title="whitebalance"/>
+                        </div>
+                        <div style={{ width: '90%', padding: 13 }} >colortemperature:<br></br>
+                            <Form options={colortemperature} setSeconds={setConfigTo} title="colortemperature" />
                         </div>
                     </div>
                 </div>

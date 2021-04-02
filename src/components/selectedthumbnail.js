@@ -17,6 +17,7 @@ async function SendEmailTo(credentials,token) {
 export default function Selectedthumbnail() {
   const {emaildata,setEmailData}=useEmailData();
   const {token,setToken}=useToken();
+  console.log(emaildata);
   const data={
     "data":emaildata,
     "user":token

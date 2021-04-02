@@ -28,8 +28,8 @@ const Demo = () => {
     let mainy = (y+y2)/2
     let mapx=(mainx/960)*100
     let mapy=(mainy/640)*100
-    let eosx=Math.round((mapx/100)*6330);
-    let eosy=Math.round((mapy/100)*4500);
+    let eosx=Math.round((mapx/100)*4538);
+    let eosy=Math.round((mapy/100)*3000);
     console.log(eosx,eosy);
     const handleConfig = async e => {
       const urlgj='http://0.0.0.0:5000/camera_ctrl/api/CameraConfigForApiEos/'+cameraid;
@@ -38,7 +38,6 @@ const Demo = () => {
       }
     handleConfig();
   };
-  
   return (
     <Cropper
       src={'http://0.0.0.0:5000/camera_ctrl/api/camera_preview_source/'+cameraid}

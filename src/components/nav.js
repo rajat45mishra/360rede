@@ -12,6 +12,13 @@ export  function Nav() {
     );
 
     setFolder(response.data);
+    if(!folder){
+      const response = await axios.get(
+        'http://0.0.0.0:5000/file/transformers/'
+      );
+  
+      setFolder(response.data);
+    }
   };
     return (
         <div>
